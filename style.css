@@ -1,90 +1,155 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+
+
 }
 
-.background{
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fffffa;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.background {
     text-align: center;
-    background-color:#f3e9dc;
     width: 100%;
     max-width: 480px;
+    margin: auto;
+    padding: 10px;
 }
-.title{
+
+.title {
     padding: 20px;
     font-size: 4rem;
-    color : #714825;
+    color: #6a8d73;
     text-shadow: 0px 3px 2px #cfcaca;
-
 }
-.input-sec{
+
+.input-sec {
     padding: 0 20px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
-#inputbox{
-   max-width: 480px;
-   width: 80%;
-   height: 50px;
-   border: none;
-   border-radius: 20px;
-   box-shadow: 0 2px 4px rgba(0,0,0,.2);
-   padding: 8px;
-   font-size: 1em;
-   
+#inputbox {
+    max-width: 480px;
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    font-size: 1em;
 }
-#btn{
+
+#btn {
     padding: 5px 10px;
     margin: 5px;
     border: none;
     border-radius: 15px;
     color: white;
-    background-color: #3d9970	;
-    box-shadow: 0 2px 4px rgba(0,0,0,.5);
+    background-color: #3d9970;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
-#btn:hover{
+
+#btn:hover {
     transform: scale(0.9);
-    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+input, button, textarea, select {
+  font-family: inherit;
+}
+
+
 .task-sec {
-    height: 80vh;
-    
+    height: 80dvh;
+    overflow-y: auto;
+    padding-bottom: 20px;
 }
-.task-items{
+
+.task-items {
     width: 90%;
     padding: 5px;
     margin: 8px auto;
-
+    gap: 10px;
     font-size: 1.5em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
-
 }
+
 .completed {
     text-decoration: line-through;
     opacity: 0.6;
     transition: 0.2s;
 }
 
-.del-btn{
+.del-btn {
     margin-left: auto;
     padding: 5px 10px;
     border: none;
     border-radius: 15px;
     color: white;
-    background-color: #b94c5b	;
-    box-shadow: 0 2px 4px rgba(0,0,0,.5);
+    background-color: #b94c5b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
+
 .del-btn:hover {
     background-color: #a83c4a;
     transform: scale(0.95);
-    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+@media (min-width: 600px) {
+    .background {
+        max-width: 700px;
+    }
+
+    .title {
+        font-size: 5rem;
+    }
+
+    #inputbox {
+        font-size: 1.2em;
+        height: 55px;
+    }
+
+    #btn {
+        font-size: 1.1em;
+        height: 30px;
+    }
+
+    .task-items {
+        font-size: 1.6em;
+        gap: 15px;
+    }
+
+}
+
+@media (min-width: 900px) {
+    .background {
+        max-width: 900px;
+    }
+
+    .task-items {
+        font-size: 1.8em;
+    }
+
+    #inputbox {
+        width: 75%;
+    }
+
+
+}
